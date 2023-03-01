@@ -1,0 +1,338 @@
+:root{
+    --grey: #817d92;
+    --body-bg: #08070b;
+    --darkGrey: #24232C;
+    --very-dark-grey: #18171f;
+    --white: #e6e5ea;
+    --green: #A4FFAF;
+    --dark: #18171F;
+    --red: #F64A4A;
+    --orange: #FB7C58;
+    --yellow: #F8CD65;
+    --password-grey: #4A4951;
+}
+
+*, 
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg);   
+}
+
+.container{
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    /* margin-bottom: 2em; */
+}
+
+.heading-main{
+    color: var(--grey);
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+/* ------------Password Box------------ */
+
+.container-input{
+    background-color: var(--darkGrey);
+    padding: 0.2em 1.2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 3rem;
+    width: 25rem;
+}
+
+.container-input__password{
+    color: var(--password-grey);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.container-input__btn{
+    width: 1.6em;
+    height: 1.8em;
+    background-image: url(./assets/icon-copy.svg);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container-input__btn:hover{
+    background-image: url(./assets/icon-copy-hover.svg);
+    transition: 0.2s;
+}
+
+/* ------------Generator Box------------ */
+
+.container-box{
+    background-color: var(--darkGrey);
+    margin-top: 1rem;
+    width: 25rem;
+    padding: 0.2em 1.2em;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.container-box__label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -1em;
+}
+
+.label1{
+    font-size: 1em;
+}
+
+#rangeValue{
+    font-size: 1.2em;
+    color: var(--green);
+    cursor: context-menu;
+}
+
+/* .range{ */
+    /* -webkit-appearance: none;
+    width: 100%;
+    height: 0.5em;
+    outline: none;
+    background: var(--very-dark-grey);
+    background-image: linear-gradient(var(--green), var(--green));
+    background-size: 50% 100%;
+    background-repeat: no-repeat; */
+
+    /* background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 10% 100%;
+  background-repeat: no-repeat; */
+
+  /* -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100%;
+  height: 7px;
+  margin-bottom: 3.6rem;
+  background: hsl(248, 15%, 11%);
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 50% 100%;
+  background-repeat: no-repeat; */
+/* } */
+
+/* .range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: var(--white);
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    cursor: pointer;
+} */
+
+/* .range::-webkit-slider-thumb:hover{
+    background: var(--very-dark-grey);
+    border: 0.125em solid var(--green);
+} */
+
+/* ------------ Slider ----------- */
+
+#length {
+    margin-top: 1.5em;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    height: 1.75em;
+    margin: 0.625em 0;
+    width: 100%;
+}
+
+input[type=range]:focus{
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+    background-color: transparent;
+}
+
+/* ------------ Thumb ----------- */
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: var(--white);
+    width: 1.75em;
+    height: 1.75em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb:hover{
+    background: var(--very-dark-grey);
+    border: 0.125em solid var(--green);
+}
+
+/* ------------Custom Tracks----------- */
+
+.leftTrack {
+    position: relative;
+    background-color: var(--green);
+    height: 0.5em;
+    width: 50%;
+    float: left;
+    bottom: 2.25em;
+    z-index: 1;
+}
+
+.rightTrack {
+    top: 50%;
+    position: relative;
+    background-color: var(--dark);
+    height: 0.5em;
+    width: 100%;
+    bottom: 2.25em;
+    z-index: 0;
+}
+
+/* ------------Check Boxes------------ */
+
+.container-box__group{
+    margin-top: -1em;
+}
+
+.include-box{
+    display: flex;
+}
+
+input[type=checkbox]{
+    visibility: hidden;
+}
+
+.custom-checkbox{
+    position: absolute;
+    padding-right: 1em;
+    cursor: pointer;
+    height: 1.2em;
+    width: 1em;
+    margin-top: 1em;
+    border: 0.125em solid var(--white);
+}
+
+.custom-checkbox::after{
+    display: none;
+    content: url('./assets/icon-check.svg');
+    position:absolute;
+    margin-top: -1em;
+}
+
+.custom-checkbox:hover{
+    border-color: var(--green);
+}
+
+input[type=checkbox]:checked ~ .custom-checkbox{
+    border-color: var(--green);
+    background-color: var(--green);
+}
+
+input[type=checkbox]:checked ~ .custom-checkbox::after{
+    display: block;
+}
+
+.custom-checkbox__heading{
+    padding-left: 1.5em;
+}
+
+/* ------------Password Strength------------ */
+
+.container-box__strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-dark-grey);
+    padding: 0.5em 1.5em;
+    margin-top: 0.6em;
+}
+
+.strength-rating__text{
+    text-transform: uppercase;
+}
+
+.strength-label{
+    color: var(--white);
+    opacity: 0.4;
+}
+
+.strength-rating{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+
+.strength-rating__bar{
+    display: flex;
+    gap: 0.5em;
+}
+.line{
+    display: block;
+    width: 0.5em;
+    height: 1.5em;
+    border: 0.1em solid var(--white);
+}
+
+.tooWeak{
+    background-color: var(--red);
+    border: none;
+}
+
+.weak{
+    background-color: var(--orange);
+    border: none;
+}
+
+.medium{
+    background-color: var(--yellow);
+    border: none;
+}
+
+.strong{
+    background-color: var(--green);
+    border: none;
+}
+
+/* ------------Generator Button------------ */
+
+.container-box__group___btn{
+    width: 100%;
+    height: 4em;
+    margin: 1.2em 0 1em 0;
+    text-align: center;
+    border: 2px solid var(--green);
+    background-color: var(--green);
+}
+
+.generator{
+    font-weight: 600;
+    padding-right: 1em;
+}
+
+.container-box__group___btn:hover{
+    background-color: var(--darkGrey);
+    color: var(--green);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.container-box__group___btn:hover svg path{
+    fill: var(--green);
+}

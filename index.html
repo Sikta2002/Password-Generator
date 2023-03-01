@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Frontend Mentor | Password Generator</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>        
+        <main class="container">
+            <h1 class="heading-main">Password Generator</h1>
+
+            <!-- Container one -->
+            <div class="container-input">
+                <p class="container-input__password" id="password">P4$5W0rD!</p>
+                <button type="button" class="container-input__btn" id="copy" aria-label="copy"></button>
+            </div>
+
+            <!-- Container Two -->
+            <div class="container-box">
+                <form action="/">
+                    <div class="container-box__label">
+                        <label class="label1" for="length">Character Length</label>
+                        <span id="rangeValue">10</span>
+                    </div>
+
+                    <!-- Slider -->
+                    <input type="range" name="lengthInput" id="length" min="0" max="20" value="10">
+                    <div class="leftTrack"></div>
+                    <div class="rightTrack"></div>
+                </form>
+
+                <form>
+                    <div class="container-box__group">
+
+                        <!-- Checkboxes -->
+                        <label class="include-box">
+                            <input type="checkbox" class="includeCheckbox" id="uppercase" value="uppercase">
+                            <span class="custom-checkbox"></span>
+                            <p class="custom-checkbox__heading">Include Uppercase Letters</p>
+                        </label>
+                        <label class="include-box">
+                            <input type="checkbox" class="includeCheckbox" id="lowercase" value="lowercase" checked>
+                            <span class="custom-checkbox"></span>
+                            <p class="custom-checkbox__heading">Include Lowercase Letters</p>
+                        </label>
+                        <label class="include-box">
+                            <input type="checkbox" class="includeCheckbox" id="numbers" value="numbers">
+                            <span class="custom-checkbox"></span>
+                            <p class="custom-checkbox__heading">Include Numbers</p>
+                        </label>
+                        <label class="include-box">
+                            <input type="checkbox" class="includeCheckbox" id="symbols" value="symbols">
+                            <span class="custom-checkbox"></span>
+                            <p class="custom-checkbox__heading">Include Symbols</p>
+                        </label>
+                    </div>
+
+                    <div class="container-box__strength">
+                        <span class="strength-label">STRENGTH</span>
+
+                        <!-- Password Strength Rating -->
+                        <div class="strength-rating">
+                            <p class="strength-rating__text" id="strengthText">too weak!</p>
+                            <div class="strength-rating__bar">
+                                <span id="line1" class="line tooWeak"></span>
+                                <span id="line2" class="line"></span>
+                                <span id="line3" class="line"></span>
+                                <span id="line4" class="line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generate Button -->
+                    <button type="button" class="container-box__group___btn" id="generate_btn">
+                        <span class="generator">GENERATE</span> 
+                        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              fill="#24232C"
+                              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                            />
+                          </svg>
+                    </button>
+                </form>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
