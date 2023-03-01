@@ -62,7 +62,7 @@ body{
 .container-input__btn{
     width: 1.6em;
     height: 1.8em;
-    background-image: url(./assets/icon-copy.svg);
+    background-image: url(./icon-copy.svg);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -70,7 +70,7 @@ body{
 }
 
 .container-input__btn:hover{
-    background-image: url(./assets/icon-copy-hover.svg);
+    background-image: url(./icon-copy-hover.svg);
     transition: 0.2s;
 }
 
@@ -231,7 +231,7 @@ input[type=checkbox]{
 
 .custom-checkbox::after{
     display: none;
-    content: url('./assets/icon-check.svg');
+    content: url('./icon-check.svg');
     position:absolute;
     margin-top: -1em;
 }
