@@ -62,7 +62,7 @@ body{
 .container-input__btn{
     width: 1.6em;
     height: 1.8em;
-    background-image: url(icon-copy.svg);
+    background-image: url("icon-copy.svg");
     background-color: transparent;
     border: none;
     cursor: pointer;
