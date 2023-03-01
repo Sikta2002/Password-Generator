@@ -1,9 +1,9 @@
 <h1>Password Generator</h1>
 
-<p>Website: <a href="#">Click here</a></p>
+<p>Website: <a href="https://sikta2002.github.io/Password-Generator/">Click here</a></p>
 
 <div align="center">
-<img src="Screenshot.jpg" width="500">
+<img src="Screenshot.jpg" width="700">
 </div>
 
 <h2>Table of contents</h2>
